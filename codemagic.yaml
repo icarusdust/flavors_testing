@@ -14,7 +14,7 @@ workflows:
         XCODE_SCHEME: _
         BUNDLE_ID: _
         ENTRY_POINT: _
-      flutter: 2.10
+      flutter: 2.10.2
       xcode: 13.2
       cocoapods: default
     scripts:
