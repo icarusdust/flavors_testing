@@ -49,3 +49,7 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+   publishing:
+      google_play: # For publishing your Android app to Google Play
+        credentials: $GCLOUD_CREDENTIALS
+        track: internal
