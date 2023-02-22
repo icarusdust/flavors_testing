@@ -9,9 +9,8 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/Runner.xcworkspace" # <-- Put your encrypted Certificate Private Key here
         # Environment variable values provided when triggering build with Codemagic API. Alternatively add the required values below.
-        APP_STORE_APP_ID: 1555555551 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
         XCODE_CONFIG: _
-        XCODE_SCHEME: _
+        XCODE_SCHEME: "Runner"
         BUNDLE_ID: _
         ENTRY_POINT: _
       flutter: 2.10.2
@@ -39,8 +38,6 @@ workflows:
       - name: Flutter build ipa and automatic versioning
         script: |
           flutter build ipa --release \
-          --build-name=1.0.0 \
-          --build-number=$(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_ID") + 1)) \
           --export-options-plist=/Users/builder/export_options.plist \
           --flavor="$XCODE_SCHEME" \
           -t "$ENTRY_POINT"      
