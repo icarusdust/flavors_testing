@@ -12,7 +12,7 @@ workflows:
         XCODE_CONFIG: _
         XCODE_SCHEME: "Runner"
         BUNDLE_ID: "com.example.flavorsTesting"
-        ENTRY_POINT: "lib/main.dart"
+        ENTRY_POINT: "lib/main_dev.dart"
       flutter: 3.3.4
       xcode: 13.4.1
       cocoapods: default
